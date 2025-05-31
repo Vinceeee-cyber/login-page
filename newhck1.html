@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Saved Credentials</title>
+</head>
+<body>
+  <h2>Saved Login Info</h2>
+  <div id="savedInfo"></div>
+
+  <script>
+    window.onload = () => {
+      const username = localStorage.getItem("username");
+      const password = localStorage.getItem("password");
+
+      const savedInfoDiv = document.getElementById("savedInfo");
+
+      if(username && password) {
+        savedInfoDiv.innerText = `Username: ${username}\nPassword: ${password}`;
+      } else {
+        savedInfoDiv.innerText = "No saved credentials found.";
+      }
+    }
+  </script>
+</body>
+</html>

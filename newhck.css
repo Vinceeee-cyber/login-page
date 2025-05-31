@@ -1,0 +1,82 @@
+/* Your existing styles */
+body {
+  background: #f0f2f5;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  display: none;
+  font-size: 0.9em;
+}
+
+.social-login {
+  margin-top: 20px;
+}
+
+/* Facebook button styling with icon above text */
+.facebook-btn {
+  display: inline-block;
+  background-color: #3b5998;
+  color: white;
+  padding: 12px 10px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: none;
+  user-select: none;
+}
+
+/* Make icon centered and above text */
+.facebook-btn i {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.facebook-btn:hover {
+  background-color: #2d4373;
+}

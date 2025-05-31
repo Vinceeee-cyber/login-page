@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="newhck.css" />
+  <!-- Font Awesome for Facebook icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .login-container {
+      text-align: center;
+      margin-top: 50px;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .facebook-header {
+      font-size: 50px;
+      color: #3b5998; /* Facebook blue */
+      margin-bottom: 10px;
+    }
+    .facebook-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: #3b5998;
+      margin-bottom: 30px;
+    }
+    input {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #3b5998;
+      color: white;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #2d4373;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <!-- Facebook icon above -->
+    <i class="fab fa-facebook-f facebook-header"></i>
+    <!-- Facebook text below -->
+    <div class="facebook-text">Facebook</div>
+
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("loginForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if(username && password) {
+        // Save data to localStorage
+        localStorage.setItem("username", username);
+        localStorage.setItem("password", password);
+
+        alert("Credentials saved!");
+      } else {
+        alert("Please fill both fields");
+      }
+    });
+  </script>
+  
+</body>
+</html>
